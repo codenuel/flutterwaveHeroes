@@ -1,0 +1,100 @@
+ <div class="wrapper">
+        <div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
+           
+            <div class="logo">
+                <a href="./" class="simple-text">
+                    School portal
+                </a>
+            </div>
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                    <li class="">
+                        <a href="./">
+                            <i class="material-icons">dashboard</i>
+                            <p>Dashboard</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./addStudent">
+                            <i class="material-icons">add_circle_outline</i>
+                            <p>Add student</p>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="./students">
+                            <i class="material-icons">remove_red_eye</i>
+                            <p>All Student</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <nav class="navbar navbar-transparent navbar-absolute">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#"> Student Records </a>
+                    </div>
+                </div>
+            </nav>
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header" data-background-color="purple">
+                                    <h4 class="title">Student Table</h4>
+                                    <p class="category">View records</p>
+                                </div>
+                                <div class="card-content table-responsive">
+                                    <table class="table">
+                                        <thead class="text-primary">
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Age</th>
+                                            <th>Sex</th>
+                                            <th>Class</th>
+                                            <th>School</th>
+                                            <th>Address</th>
+                                            <th>State</th>
+                                            <th>Grade</th>
+                                            <th>Update Record</th>
+                                            <th></th>
+                                        </thead>
+                                        <tbody>
+                                            {{#each students}}
+                                            <tr>
+                                                <td>{{this.first_name}}</td>
+                                                <td>{{this.last_name}}</td>
+                                                <td>{{this.age}}</td>
+                                                <td>{{this.sex}}</td>
+                                                <td>{{this.class}}</td>
+                                                <td>{{this.school}}</td>
+                                                <td>{{this.address}}</td>
+                                                <td>{{this.state}}</td>
+                                                <td>{{this.grade}}</td>
+                                                <td class="btn btn-primary">Update</td>
+                                                <td class="btn btn-danger">Delete</td>
+                                            </tr>
+                                            {{/each}}
+                                            
+                                           
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
